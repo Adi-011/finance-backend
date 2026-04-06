@@ -4,15 +4,6 @@ A robust Node.js backend system designed for financial record management. This p
 
 ---
 
-## Tech Stack
-- **Runtime:** Node.js
-- **Framework:** Express.js
-- **ORM:** Sequelize
-- **Database:** SQLite (File-based)
-- **Utilities:** CORS, Body-Parser
-
----
-
 ## Setup & Installation
 Install Dependencies:
 
