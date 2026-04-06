@@ -2,7 +2,7 @@ const { Record, sequelize } = require('../config/db');
 
 exports.getSummary = async (req, res) => {
   try {
-    // Calculate total income vs expenses
+  
     const overallStats = await Record.findAll({
       attributes: [
         'type',
@@ -11,7 +11,6 @@ exports.getSummary = async (req, res) => {
       group: ['type']
     });
 
-    // Calculate totals broken down by category
     const categoryTotals = await Record.findAll({
       attributes: [
         'category', 

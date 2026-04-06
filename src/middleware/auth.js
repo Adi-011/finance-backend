@@ -3,8 +3,7 @@ const { User } = require('../config/db');
 const authorize = (allowedRoles = []) => {
   return async (req, res, next) => {
     try {
-      // In a real app, you would extract and verify a JWT token here.
-      // For this assignment, we simulate auth via a custom header.
+      
       const userId = req.headers['x-user-id'];
       
       if (!userId) {
@@ -22,7 +21,7 @@ const authorize = (allowedRoles = []) => {
         return res.status(403).json({ error: `Access Denied: Requires one of [${allowedRoles.join(', ')}]` });
       }
 
-      // Attach user to request for downstream use
+  
       req.user = user;
       next();
     } catch (error) {
