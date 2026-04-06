@@ -7,7 +7,7 @@ const dashboardCtrl = require('./controllers/dashboardController');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Finance Backend API is running! Use /api/records or /api/dashboard.');
+  res.send('Finance Backend API is running');
 });
 app.use(cors());
 app.use(express.json());
